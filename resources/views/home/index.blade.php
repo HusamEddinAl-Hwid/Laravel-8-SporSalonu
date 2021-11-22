@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'Laravel Gym Site')
+@section('title', 'Laravel Gym Site Github')
 
 @section('description')
     Gymso for the best gym experience you can get in Turkey.
