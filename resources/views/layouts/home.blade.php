@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <title>@yield('title')</title>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="@yield('keywords')">
-    <meta name="author" content="Elon Dust">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('assets')}}/css/aos.css">
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{{asset('assets')}}/css/tooplate-gymso-style.css">
-    <!--
-    Tooplate 2119 Gymso Fitness
-    https://www.tooplate.com/view/2119-gymso-fitness
-    -->
-    @yield('css')
-    @yield('headerjs')
-</head>
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-@include('home._nav')
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-@include('home._hero')
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/fontawesome.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/owl.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/lightbox.css">
+    <!--
+
+    TemplateMo 569 Edu Meeting
+
+    https://templatemo.com/tm-569-edu-meeting
+
+    -->
+</head>
+
+<body>
+
+@include('home._header')
+
+@include('home._mainbanner')
+
+@include('home._slider')
 
 @section('content')
     Contents

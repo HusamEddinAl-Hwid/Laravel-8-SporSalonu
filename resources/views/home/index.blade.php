@@ -10,309 +10,522 @@
 
 @section('content')
 
-    <section class="feature" id="feature">
+
+    <section class="upcoming-meetings" id="meetings">
         <div class="container">
             <div class="row">
-
-                <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
-                    <h2 class="mb-3 text-white" data-aos="fade-up">New to the gymso?</h2>
-
-                    <h6 class="mb-4 text-white" data-aos="fade-up">Your membership is up to 2 months FREE ($62.50 per month)</h6>
-
-                    <p data-aos="fade-up" data-aos-delay="200">Gymso is free HTML template by <a rel="nofollow" href="https://www.tooplate.com" target="_parent">Tooplate</a> for your commercial website. Bootstrap v4.2.1 Layout. Feel free to use it.</p>
-
-                    <a href="#" class="btn custom-btn bg-color mt-3" data-aos="fade-up" data-aos-delay="300" data-toggle="modal" data-target="#membershipForm">Become a member today</a>
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Upcoming Meetings</h2>
+                    </div>
                 </div>
-
-                <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
-                    <div class="about-working-hours">
-                        <div>
-
-                            <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">Working hours</h2>
-
-                            <strong class="d-block" data-aos="fade-up" data-aos-delay="600">Sunday : Closed</strong>
-
-                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Monday - Friday</strong>
-
-                            <p data-aos="fade-up" data-aos-delay="800">7:00 AM - 10:00 PM</p>
-
-                            <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Saturday</strong>
-
-                            <p data-aos="fade-up" data-aos-delay="800">6:00 AM - 4:00 PM</p>
+                <div class="col-lg-4">
+                    <div class="categories">
+                        <h4>Meeting Catgories</h4>
+                        <ul>
+                            <li><a href="#">Sed tempus enim leo</a></li>
+                            <li><a href="#">Aenean molestie quis</a></li>
+                            <li><a href="#">Cras et metus vestibulum</a></li>
+                            <li><a href="#">Nam et condimentum</a></li>
+                            <li><a href="#">Phasellus nec sapien</a></li>
+                        </ul>
+                        <div class="main-button-red">
+                            <a href="meetings.html">All Upcoming Meetings</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="meeting-item">
+                                <div class="thumb">
+                                    <div class="price">
+                                        <span>$22.00</span>
+                                    </div>
+                                    <a href="meeting-details.html"><img src="assets/images/meeting-01.jpg" alt="New Lecturer Meeting"></a>
+                                </div>
+                                <div class="down-content">
+                                    <div class="date">
+                                        <h6>Nov <span>10</span></h6>
+                                    </div>
+                                    <a href="meeting-details.html"><h4>New Lecturers Meeting</h4></a>
+                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="meeting-item">
+                                <div class="thumb">
+                                    <div class="price">
+                                        <span>$36.00</span>
+                                    </div>
+                                    <a href="meeting-details.html"><img src="assets/images/meeting-02.jpg" alt="Online Teaching"></a>
+                                </div>
+                                <div class="down-content">
+                                    <div class="date">
+                                        <h6>Nov <span>24</span></h6>
+                                    </div>
+                                    <a href="meeting-details.html"><h4>Online Teaching Techniques</h4></a>
+                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="meeting-item">
+                                <div class="thumb">
+                                    <div class="price">
+                                        <span>$14.00</span>
+                                    </div>
+                                    <a href="meeting-details.html"><img src="assets/images/meeting-03.jpg" alt="Higher Education"></a>
+                                </div>
+                                <div class="down-content">
+                                    <div class="date">
+                                        <h6>Nov <span>26</span></h6>
+                                    </div>
+                                    <a href="meeting-details.html"><h4>Higher Education Conference</h4></a>
+                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="meeting-item">
+                                <div class="thumb">
+                                    <div class="price">
+                                        <span>$48.00</span>
+                                    </div>
+                                    <a href="meeting-details.html"><img src="assets/images/meeting-04.jpg" alt="Student Training"></a>
+                                </div>
+                                <div class="down-content">
+                                    <div class="date">
+                                        <h6>Nov <span>30</span></h6>
+                                    </div>
+                                    <a href="meeting-details.html"><h4>Student Training Meetup</h4></a>
+                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
         </div>
     </section>
 
-
-    <!-- ABOUT -->
-    <section class="about section" id="about">
+    <section class="apply-now" id="apply">
         <div class="container">
             <div class="row">
-
-                <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
-                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Hello, we are Gymso</h2>
-
-                    <p data-aos="fade-up" data-aos-delay="400">You are NOT allowed to redistribute this HTML template downloadable ZIP file on any template collection site. You are allowed to use this template for your personal or business websites.</p>
-
-                    <p data-aos="fade-up" data-aos-delay="500">If you have any question regarding <a rel="nofollow" href="https://www.tooplate.com/view/2119-gymso-fitness" target="_parent">Gymso Fitness HTML template</a>, you can <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">contact Tooplate</a> immediately. Thank you.</p>
-
-                </div>
-
-                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="700">
-                    <div class="team-thumb">
-                        <img src="{{asset('assets')}}/images/team/team-image.jpg" class="img-fluid" alt="Trainer">
-
-                        <div class="team-info d-flex flex-column">
-
-                            <h3>Mary Yan</h3>
-                            <span>Yoga Instructor</span>
-
-                            <ul class="social-icon mt-3">
-                                <li><a href="#" class="fa fa-twitter"></a></li>
-                                <li><a href="#" class="fa fa-instagram"></a></li>
-                            </ul>
+                <div class="col-lg-6 align-self-center">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <h3>APPLY FOR BACHELOR DEGREE</h3>
+                                <p>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout.</p>
+                                <div class="main-button-red">
+                                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="item">
+                                <h3>APPLY FOR BACHELOR DEGREE</h3>
+                                <p>You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.</p>
+                                <div class="main-button-yellow">
+                                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="800">
-                    <div class="team-thumb">
-                        <img src="{{asset('assets')}}/images/team/team-image01.jpg" class="img-fluid" alt="Trainer">
-
-                        <div class="team-info d-flex flex-column">
-
-                            <h3>Catherina</h3>
-                            <span>Body trainer</span>
-
-                            <ul class="social-icon mt-3">
-                                <li><a href="#" class="fa fa-instagram"></a></li>
-                                <li><a href="#" class="fa fa-facebook"></a></li>
-                            </ul>
-                        </div>
+                <div class="col-lg-6">
+                    <div class="accordions is-first-expanded">
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>About Edu Meeting HTML Template</span>
+                                <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>HTML CSS Bootstrap Layout</span>
+                                <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna, maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
+                                        Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus sollicitudin tincidunt.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion">
+                            <div class="accordion-head">
+                                <span>Please tell your friends</span>
+                                <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit, at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur velit.<br><br>
+                                        Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="accordion last-accordion">
+                            <div class="accordion-head">
+                                <span>Share this to your colleagues</span>
+                                <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="content">
+                                    <p>Maecenas suscipit enim libero, vel lobortis justo condimentum id. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br><br>
+                                        Sed eleifend metus sit amet magna tristique, posuere laoreet arcu semper. Nulla pellentesque ut tortor sit amet maximus. In eu libero ullamcorper, semper nisi quis, convallis nisi.</p>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-
-    <!-- CLASS -->
-    <section class="class section" id="class">
+    <section class="our-courses" id="courses">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-12 col-12 text-center mb-5">
-                    <h6 data-aos="fade-up">Get A Perfect Body</h6>
-
-                    <h2 data-aos="fade-up" data-aos-delay="200">Our Training Classes</h2>
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Our Popular Courses</h2>
+                    </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                    <div class="class-thumb">
-                        <img src="{{asset('assets')}}/images/class/yoga-class.jpg" class="img-fluid" alt="Class">
-
-                        <div class="class-info">
-                            <h3 class="mb-1">Yoga</h3>
-
-                            <span><strong>Trained by</strong> - Bella</span>
-
-                            <span class="class-price">$50</span>
-
-                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                <div class="col-lg-12">
+                    <div class="owl-courses-item owl-carousel">
+                        <div class="item">
+                            <img src="assets/images/course-01.jpg" alt="Course One">
+                            <div class="down-content">
+                                <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$160</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-02.jpg" alt="Course Two">
+                            <div class="down-content">
+                                <h4>Curabitur molestie dignissim purus vel</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$180</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-03.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Nulla at ipsum a mauris egestas tempor</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$140</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-04.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Aenean molestie quis libero gravida</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-01.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$250</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-02.jpg" alt="">
+                            <div class="down-content">
+                                <h4>TemplateMo is the best website for Free CSS</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$270</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-03.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Web Design Templates at your finger tips</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$340</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-04.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Please visit our website again</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$360</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-01.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Responsive HTML Templates for you</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$400</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-02.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Download Free CSS Layouts for your business</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$430</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-03.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Morbi in libero blandit lectus cursus</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$480</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/course-04.jpg" alt="">
+                            <div class="down-content">
+                                <h4>Curabitur molestie dignissim purus</h4>
+                                <div class="info">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <ul>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-4">
+                                            <span>$560</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-                    <div class="class-thumb">
-                        <img src="{{asset('assets')}}/images/class/crossfit-class.jpg" class="img-fluid" alt="Class">
-
-                        <div class="class-info">
-                            <h3 class="mb-1">Areobic</h3>
-
-                            <span><strong>Trained by</strong> - Mary</span>
-
-                            <span class="class-price">$66</span>
-
-                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-                    <div class="class-thumb">
-                        <img src="{{asset('assets')}}/images/class/cardio-class.jpg" class="img-fluid" alt="Class">
-
-                        <div class="class-info">
-                            <h3 class="mb-1">Cardio</h3>
-
-                            <span><strong>Trained by</strong> - Cathe</span>
-
-                            <span class="class-price">$75</span>
-
-                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-
-    <!-- SCHEDULE -->
-    <section class="schedule section" id="schedule">
+    <section class="our-facts">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-12 col-12 text-center">
-                    <h6 data-aos="fade-up">our weekly GYM schedules</h6>
-
-                    <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Workout Timetable</h2>
-                </div>
-
-                <div class="col-lg-12 py-5 col-md-12 col-12">
-                    <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="300">
-
-                        <thead class="thead-light">
-                        <th><i class="fa fa-calendar"></i></th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                        </thead>
-
-                        <tbody>
-                        <tr>
-                            <td><small>7:00 am</small></td>
-                            <td>
-                                <strong>Cardio</strong>
-                                <span>7:00 am - 9:00 am</span>
-                            </td>
-                            <td>
-                                <strong>Power Fitness</strong>
-                                <span>7:00 am - 9:00 am</span>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <strong>Yoga Section</strong>
-                                <span>7:00 am - 9:00 am</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><small>9:00 am</small></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <strong>Boxing</strong>
-                                <span>8:00 am - 9:00 am</span>
-                            </td>
-                            <td>
-                                <strong>Areobic</strong>
-                                <span>8:00 am - 9:00 am</span>
-                            </td>
-                            <td></td>
-                            <td>
-                                <strong>Cardio</strong>
-                                <span>8:00 am - 9:00 am</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><small>11:00 am</small></td>
-                            <td></td>
-                            <td>
-                                <strong>Boxing</strong>
-                                <span>11:00 am - 2:00 pm</span>
-                            </td>
-                            <td>
-                                <strong>Areobic</strong>
-                                <span>11:30 am - 3:30 pm</span>
-                            </td>
-                            <td></td>
-                            <td>
-                                <strong>Body work</strong>
-                                <span>11:50 am - 5:20 pm</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><small>2:00 pm</small></td>
-                            <td>
-                                <strong>Boxing</strong>
-                                <span>2:00 pm - 4:00 pm</span>
-                            </td>
-                            <td>
-                                <strong>Power lifting</strong>
-                                <span>3:00 pm - 6:00 pm</span>
-                            </td>
-                            <td></td>
-                            <td>
-                                <strong>Cardio</strong>
-                                <span>6:00 pm - 9:00 pm</span>
-                            </td>
-                            <td></td>
-                            <td>
-                                <strong>Crossfit</strong>
-                                <span>5:00 pm - 7:00 pm</span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="row">
-
-                <div class="ml-auto col-lg-5 col-md-6 col-12">
-                    <h2 class="mb-4 pb-2" data-aos="fade-up" data-aos-delay="200">Feel free to ask anything</h2>
-
-                    <form action="#" method="post" class="contact-form webform" data-aos="fade-up" data-aos-delay="400" role="form">
-                        <input type="text" class="form-control" name="cf-name" placeholder="Name">
-
-                        <input type="email" class="form-control" name="cf-email" placeholder="Email">
-
-                        <textarea class="form-control" rows="5" name="cf-message" placeholder="Message"></textarea>
-
-                        <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
-                    </form>
-                </div>
-
-                <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
-                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">Where you can <span>find us</span></h2>
-
-                    <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> 120-240 Rio de Janeiro - State of Rio de Janeiro, Brazil</p>
-                    <!-- How to change your own map point
-                        1. Go to Google Maps
-                        2. Click on your location point
-                        3. Click "Share" and choose "Embed map" tab
-                        4. Copy only URL and paste it within the src="" field below
-                    -->
-                    <div class="google-map" data-aos="fade-up" data-aos-delay="900">
-                        <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>A Few Facts About Our University</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="count-area-content percentage">
+                                        <div class="count-digit">94</div>
+                                        <div class="count-title">Succesed Students</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="count-area-content">
+                                        <div class="count-digit">126</div>
+                                        <div class="count-title">Current Teachers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="count-area-content new-students">
+                                        <div class="count-digit">2345</div>
+                                        <div class="count-title">New Students</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="count-area-content">
+                                        <div class="count-digit">32</div>
+                                        <div class="count-title">Awards</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <div class="col-lg-6 align-self-center">
+                    <div class="video">
+                        <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img src="assets/images/play-icon.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 
 
 @endsection
