@@ -1,0 +1,75 @@
+@extends('layouts.admin')
+
+@section('title',  'Add Category Page')
+
+@section('content')
+<main class="mdl-layout__content">
+    <div class="mdl-grid mdl-grid--no-spacing dashboard">
+
+        <div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+
+            <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Add Category</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div>
+                                        <form class="form form--basic" action="{{route('admin_category_create')}}" method="post">
+                                            @csrf
+                                            <div class="mdl-grid">
+                                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone form__article">
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                        <label class="mdl-textfield__label">Parent</label>
+
+                                                        <select class="mdl-textfield__input" name="parent_id" >
+                                                            <option value="0" style="color:grey" selected="selected">Main Category</option>
+                                                            @foreach($datalist as $rs)
+                                                                <option style="color:black" value="{{$rs->id}}">{{$rs->title}}</option>
+                                                            @endforeach
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                        <input class="mdl-textfield__input" type="text" name="title">
+                                                        <label class="mdl-textfield__label">Title</label>
+                                                    </div>
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                        <input class="mdl-textfield__input" type="text" name="keywords">
+                                                        <label class="mdl-textfield__label">Keywords</label>
+                                                    </div>
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                        <input class="mdl-textfield__input" type="text" name="description">
+                                                        <label class="mdl-textfield__label">Description</label>
+                                                    </div>
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                        <input class="mdl-textfield__input" type="text" name="slug">
+                                                        <label class="mdl-textfield__label">Slug</label>
+                                                    </div>
+                                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                        <label class="mdl-textfield__label">Status</label>
+                                                        <select class="mdl-textfield__input" name="status" >
+                                                            <option style="color:black" selected="selected">False</option>
+                                                            <option style="color:black">True</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
+                                                        <div class="mdl-layout-spacer"></div>
+                                                            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal">
+                                                                Add Category
+                                                            </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+@endsection

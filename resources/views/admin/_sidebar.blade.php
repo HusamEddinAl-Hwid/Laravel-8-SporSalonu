@@ -4,7 +4,7 @@
         <div class="scroller" id="scroller">
             <div class="scroll__container" id="scroll__container">
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link mdl-navigation__link--current" href="{{ route('admin_home') }}">
+                    <a class="mdl-navigation__link mdl-navigation__link" href="{{ route('admin_home') }}">
                         <i class="material-icons" role="presentation">dashboard</i>
                         Home
                     </a>
@@ -17,25 +17,11 @@
                     </div>
 
                     <div class="sub-navigation">
-                        <a class="mdl-navigation__link">
+                        <a class="mdl-navigation__link" href="{{ route('admin_products') }}">
                             <i class="material-icons">pages</i>
                             Products
-                            <i class="material-icons">keyboard_arrow_down</i>
+                            <i class="material-icons"></i>
                         </a>
-                        <div class="mdl-navigation">
-                            <a class="mdl-navigation__link" href="login.html">
-                                Sign in
-                            </a>
-                            <a class="mdl-navigation__link" href="sign-up.html">
-                                Sign up
-                            </a>
-                            <a class="mdl-navigation__link" href="forgot-password.html">
-                                Forgot password
-                            </a>
-                            <a class="mdl-navigation__link" href="404.html">
-                                404
-                            </a>
-                        </div>
                     </div>
                     <div class="mdl-layout-spacer"></div>
                     <hr>
