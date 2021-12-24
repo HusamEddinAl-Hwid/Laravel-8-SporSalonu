@@ -13,9 +13,9 @@
 <main class="mdl-layout__content">
     <div class="mdl-grid mdl-grid--no-spacing dashboard">
 
-        <div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+        <div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--top">
 
-            <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
+            <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
                 <div class="mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
                         <h2 class="mdl-card__title-text">Add Product</h2>
@@ -25,7 +25,7 @@
                                         <form class="form form--basic" action="{{route('admin_product_store')}}" method="post" enctype="multipart/form-data">
                                             @csrf
                                             <div class="mdl-grid">
-                                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone form__article">
+                                                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone form__article">
                                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                         <label class="mdl-textfield__label">Category</label>
 
