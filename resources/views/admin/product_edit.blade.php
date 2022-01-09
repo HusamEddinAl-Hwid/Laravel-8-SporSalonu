@@ -31,7 +31,9 @@
 
                                                         <select class="mdl-textfield__input" name="category_id" >
                                                             @foreach($datalist as $rs)
-                                                                <option style="color:black" value="{{$rs->id}}" @if ($rs->id == $data->category_id) selected="selected" @endif>{{$rs->title}}</option>
+                                                                <option style="color:black" value="{{$rs->id}}" @if ($rs->id == $data->category_id) selected="selected" @endif>
+                                                                    {{ \App\Http\Controllers\Admin\CategoryController::getParentTree($rs, $rs->title) }}
+                                                                </option>
                                                             @endforeach
                                                         </select>
 
@@ -75,7 +77,7 @@
                                                     </div>
                                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                         <label style="font-size:14px;color:#666666">Image</label>
-                                                        <input class="mdl-textfield__input" type="file" name="image" value="{{$data->image}}">
+                                                        <input class="mdl-textfield__input" type="file" name="image">
                                                         @if($data->image)
                                                             <img src="{{Storage::url($data->image)}}" height="60" alt="">
                                                         @endif

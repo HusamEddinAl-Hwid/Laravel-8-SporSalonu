@@ -5,11 +5,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>@yield('title')</title>
+    <title> @yield('title') </title>
+    <meta name="description" content=" @yield('description') ">
+    <meta name="keywords" content=" @yield('keywords') ">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,9 +34,9 @@
 
 @include('home._header')
 
-@include('home._mainbanner')
+@includeWhen($includeWhenYes, 'home._mainbanner')
 
-@include('home._slider')
+@includeWhen($includeWhenYes, 'home._slider')
 
 @section('content')
     Contents

@@ -31,7 +31,7 @@
                                         @foreach($datalist as $rs)
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->id}}</td>
-                                            <td class="mdl-data-table__cell--non-numeric">{{$rs->parent_id}}</td>
+                                            <td class="mdl-data-table__cell--non-numeric">{{ \App\Http\Controllers\Admin\CategoryController::getParentTree($rs, $rs->title) }}</td>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->title}}</td>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->status}}</td>
                                             <td class="mdl-data-table__cell--non-numeric"><a href="{{route('admin_category_edit',['id' => $rs->id])}}">

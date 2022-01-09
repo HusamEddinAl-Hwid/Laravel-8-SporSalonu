@@ -31,7 +31,7 @@
 
                                                         <select class="mdl-textfield__input" name="category_id" >
                                                             @foreach($datalist as $rs)
-                                                                <option style="color:black" value="{{$rs->id}}">{{$rs->title}}</option>
+                                                                <option style="color:black" value="{{$rs->id}}">{{ \App\Http\Controllers\Admin\CategoryController::getParentTree($rs, $rs->title) }}</option>
                                                             @endforeach
                                                         </select>
 

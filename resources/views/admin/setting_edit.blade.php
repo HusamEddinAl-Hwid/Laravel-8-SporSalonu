@@ -78,6 +78,10 @@
                                                                     <label class="mdl-textfield__label">Phone</label>
                                                                 </div>
                                                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                                                    <input class="mdl-textfield__input" type="text" name="email" value="{{$data->email}}">
+                                                                    <label class="mdl-textfield__label">Email</label>
+                                                                </div>
+                                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                                     <input class="mdl-textfield__input" type="text" name="fax" value="{{$data->fax}}">
                                                                     <label class="mdl-textfield__label">Fax</label>
                                                                 </div>
@@ -101,10 +105,6 @@
                                                                 </div>
                                                             </div>
                                                             <div class="tab-pane fade" id="custom-tabs-one-smtp" role="tabpanel" aria-labelledby="custom-tabs-one-smtp-tab">
-                                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                                                    <input class="mdl-textfield__input" type="text" name="email" value="{{$data->email}}">
-                                                                    <label class="mdl-textfield__label">Email</label>
-                                                                </div>
                                                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
                                                                     <input class="mdl-textfield__input" type="text" name="smtpserver" value="{{$data->smtpserver}}">
                                                                     <label class="mdl-textfield__label">Smtp Server</label>

@@ -35,7 +35,7 @@
                                         @foreach($datalist as $rs)
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->id}}</td>
-                                            <td class="mdl-data-table__cell--non-numeric">{{$rs->category_id}}</td>
+                                            <td class="mdl-data-table__cell--non-numeric">{{ \App\Http\Controllers\Admin\CategoryController::getParentTree($rs->category, $rs->category->title) }}</td>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->title}}</td>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->months}}</td>
                                             <td class="mdl-data-table__cell--non-numeric">{{$rs->price}}</td>
