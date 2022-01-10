@@ -30,6 +30,13 @@
                             <i class="material-icons"></i>
                         </a>
                     </div>
+                    <div class="sub-navigation">
+                        <a class="mdl-navigation__link" href="{{ route('admin_message') }}">
+                            <i class="material-icons">message</i>
+                            Contact Messages
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
                     <div class="mdl-layout-spacer"></div>
                     <hr>
                     <a class="mdl-navigation__link" href="https://github.com/CreativeIT/getmdl-dashboard">

@@ -14,7 +14,7 @@
             @endif
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
-                <div class="mt-10 sm:mt-0">
+                <div class="mt-10 sm:mt-0" style="margin-top: 350px; margin-bottom: 50px;">
                     @livewire('profile.update-password-form')
                 </div>
 

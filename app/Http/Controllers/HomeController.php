@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use MongoDB\Driver\Session;
 
 class HomeController extends Controller
 {
@@ -29,17 +31,35 @@ class HomeController extends Controller
 
     public function aboutus()
     {
-        return view('home.about');
+        $includeWhenYes = false;
+        $setting = Setting::first();
+        return view('home.about',compact('setting','includeWhenYes'));
     }
 
     public function contact()
     {
-        return view('home.about');
+        $includeWhenYes = false;
+        $setting = Setting::first();
+        return view('home.contact',compact('setting','includeWhenYes'));
+    }
+
+    public function sendmessage(Request $request)
+    {
+        $data = new Message();
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->subject = $request->input('subject');
+        $data->message = $request->input('message');
+        $data->save();
+        return redirect()->route('contact')->with('success','Your message has been received. Thanks!');
     }
 
     public function references()
     {
-        return view('home.about');
+        $includeWhenYes = false;
+        $setting = Setting::first();
+        return view('home.references',compact('setting','includeWhenYes'));
     }
 
     public function faq()

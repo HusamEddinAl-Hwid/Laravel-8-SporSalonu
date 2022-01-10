@@ -25,7 +25,7 @@
                     @include('home.usermenu')
                 </div>
 
-                <div class="col-lg-10 align-self-center">
+                <div class="col-lg-10">
                     @include('profile.show')
                 </div>
             </div>
