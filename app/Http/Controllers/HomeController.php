@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Message;
+use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +28,27 @@ class HomeController extends Controller
     {
         $includeWhenYes = true;
         $setting = Setting::first();
-        return view('home.index',compact('setting','includeWhenYes'));
+        $slider = Product::select('id','title','image','price','slug','description')->limit(6)->get();
+        $daily = Product::select('id','title','image','price','slug','description')->limit(6)->inRandomOrder()->get();
+        $popular = Product::select('id','title','image','price','slug')->limit(6)->orderByDesc('id')->get();
+        return view('home.index',compact('setting','includeWhenYes', 'slider','daily','popular'));
+    }
+
+    public function product($id,$slug)
+    {
+        $data = Product::find($id);
+        $datalist = Image::where('product_id',$id)->get();
+        $includeWhenYes = false;
+        $setting = Setting::first();
+        return view('home.product_detail',compact('setting','includeWhenYes','data','datalist'));
+    }
+
+    public function payment($id)
+    {
+        echo "Payment here <br>";
+        $data = Product::find($id);
+        print_r($data);
+        exit();
     }
 
     public function aboutus()
@@ -64,7 +86,17 @@ class HomeController extends Controller
 
     public function faq()
     {
-        return view('home.about');
+        $includeWhenYes = false;
+        $setting = Setting::first();
+        return view('home.index',compact('setting','includeWhenYes'));
+    }
+
+    public function category_products($id,$slug)
+    {
+        $includeWhenYes = false;
+        $datalist = Product::where('category_id',$id)->get();
+        $data = Category::find($id);
+        return view('home.category_products',['includeWhenYes'=>$includeWhenYes,'data'=>$data,'datalist'=>$datalist]);
     }
 
     public function login()
@@ -83,7 +115,7 @@ class HomeController extends Controller
                 return redirect()->intended('admin');
             }
 
-            return back()->withErrors(['email' => 'The provided credentails do not match our records.',]);
+            return back()->withErrors(['email' => 'The provided credentials do not match our records.',]);
         }
         else
         {

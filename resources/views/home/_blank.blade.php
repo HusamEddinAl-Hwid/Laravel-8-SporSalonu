@@ -2,7 +2,7 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getsetting()
 @endphp
-@section('title', 'About Us')
+@section('title', 'Blank')
 
 @section('description'){{$setting->description}}@endsection
 
@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Your Profile</h2>
+                    <h2>Blank</h2>
                 </div>
             </div>
         </div>

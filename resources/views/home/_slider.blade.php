@@ -3,57 +3,24 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="owl-service-item owl-carousel">
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="assets/images/service-icon-01.png" alt="">
+                    @php
+                        $i = 0;
+                    @endphp
+                    @foreach($slider as $rs)
+                        @php
+                            $i += 1;
+                        @endphp
+                        <div class="item @if($i==1) active @endif">
+                            <div class="down-content">
+                                <img src="{{Storage::url($rs->image)}}" alt="">
+                                <h4>{{$rs->title}}</h4>
+                                <p>{{$rs->price}}₺</p>
+                                <div class="main-button-yellow">
+                                    <div><a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}">Join Us Now!</a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="down-content">
-                            <h4>Best Coaching</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="assets/images/service-icon-02.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Trainers</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="assets/images/service-icon-03.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Trainees</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="assets/images/service-icon-02.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Online Meeting</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <img src="assets/images/service-icon-03.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <h4>Best Courses</h4>
-                            <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>

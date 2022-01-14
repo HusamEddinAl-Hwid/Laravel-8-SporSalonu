@@ -28,8 +28,12 @@ Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
+Route::get('/product/{id}/{slug}', [HomeController::class, 'product'])->name('product');
+Route::get('/category_products/{id}/{slug}', [HomeController::class, 'category_products'])->name('category_products');
+Route::get('/payment/{id}', [HomeController::class, 'payment'])->name('payment');
 
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
+
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function (){
