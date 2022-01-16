@@ -4,7 +4,12 @@
         <div class="row">
             <div class="col-lg-8 col-sm-8">
                 <div class="left-content">
-                    <p></p>
+                    <form class="search-form" action="{{route('getproduct')}}" method="post" style="margin:auto;max-width:400px">
+                        @csrf
+                        @livewire('search')
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                        @livewireScripts
                 </div>
             </div>
             <div class="col-lg-4 col-sm-4">
@@ -43,6 +48,7 @@
                             <a href="javascript:void(0)">{{Auth::user()->name}}</a>
                             <ul class="sub-menu">
                                 <li><a href="{{ route('myprofile') }}">My Account</a></li>
+                                <li><a href="{{ route('myreviews') }}">My Reviews</a></li>
                                 <li><a href="{{ route('admin_logout') }}">Logout</a></li>
                             </ul>
                             </li>

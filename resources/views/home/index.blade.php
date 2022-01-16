@@ -28,13 +28,13 @@
                                         <div class="price">
                                             <span>{{$rs->price}}₺</span>
                                         </div>
-                                        <a href="{{route('payment',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
+                                        <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
                                     </div>
                                     <div class="down-content">
                                         <div class="date">
                                             <h6>New </h6>
                                         </div>
-                                        <a href="{{route('payment',['id'=>$rs->id])}}"><h4>{{$rs->title}}</h4></a>
+                                        <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><h4>{{$rs->title}}</h4></a>
                                         <p>{{$rs->description}}</p>
                                     </div>
                                 </div>
@@ -68,19 +68,22 @@
                         <div class="owl-courses-item owl-carousel">
                             @foreach($popular as $rs)
                             <div class="item">
-                                <a href="{{route('payment',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt="Course"></a>
+                                <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><img src="{{Storage::url($rs->image)}}" alt="Course"></a>
                                 <div class="down-content">
                                     <h4>{{$rs->title}}</h4>
                                     <div class="info">
+                                        @php
+                                            $avgrev = \App\Http\Controllers\HomeController::avgrev($rs->id);
+                                            $countreview = \App\Http\Controllers\HomeController::countreview($rs->id);
+                                        @endphp
                                         <div class="row">
                                             <div class="col-8">
-                                                <ul>
-                                                    <li><i class="fa fa-star"></i></li>
-                                                    <li><i class="fa fa-star"></i></li>
-                                                    <li><i class="fa fa-star"></i></li>
-                                                    <li><i class="fa fa-star"></i></li>
-                                                    <li><i class="fa fa-star"></i></li>
-                                                </ul>
+                                                <i class="fa fa-star" @if($avgrev>=1) style="color: orange" @endif></i>
+                                                <i class="fa fa-star" @if($avgrev>=2) style="color: orange" @endif></i>
+                                                <i class="fa fa-star" @if($avgrev>=3) style="color: orange" @endif></i>
+                                                <i class="fa fa-star" @if($avgrev>=4) style="color: orange" @endif></i>
+                                                <i class="fa fa-star" @if($avgrev>=5) style="color: orange" @endif></i>
+                                                <p>({{ $countreview }})</p>
                                             </div>
                                             <div class="col-4">
                                                 <span>{{$rs->price}}₺</span>

@@ -2,18 +2,15 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getsetting()
 @endphp
-@section('title', $data->title . ' Product List')
+@section('title', $search . ' Product List')
 
-@section('description'){{$data->description}}@endsection
-
-@section('keywords', $data->keywords)
 
 @section('content')
     <section class="heading-page header-text" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Our {{$data->title}} subscriptions!</h2>
+                    <h2>Our {{$search}} subscriptions!</h2>
                 </div>
             </div>
         </div>
@@ -32,13 +29,13 @@
                                                 <div class="price">
                                                     <span>{{$rs->price}}₺</span>
                                                 </div>
-                                                <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
+                                                <a href="{{route('payment',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
                                             </div>
                                             <div class="down-content">
                                                 <div class="date">
                                                     <h6>New </h6>
                                                 </div>
-                                                <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><h4>{{$rs->title}}</h4></a>
+                                                <a href="{{route('payment',['id'=>$rs->id])}}"><h4>{{$rs->title}}</h4></a>
                                                 <p>{{$rs->description}}</p>
                                             </div>
                                         </div>

@@ -7,7 +7,7 @@
             <h6><a href="{{route('myprofile')}}">Subscriptions</a></h6>
         </li>
         <li>
-            <h6><a href="{{route('myprofile')}}">My Reviews</a></h6>
+            <h6><a href="{{route('myreviews')}}">My Reviews</a></h6>
         </li>
         <li>
             <h6><a href="{{route('myprofile')}}">My Messages</a></h6>

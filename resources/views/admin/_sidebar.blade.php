@@ -37,6 +37,20 @@
                             <i class="material-icons"></i>
                         </a>
                     </div>
+                    <div class="sub-navigation">
+                        <a class="mdl-navigation__link" href="{{ route('admin_review') }}">
+                            <i class="material-icons">rate_review</i>
+                            Reviews
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
+                    <div class="sub-navigation">
+                        <a class="mdl-navigation__link" href="{{ route('admin_faq') }}">
+                            <i class="material-icons">question_answer</i>
+                            FAQ
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
                     <div class="mdl-layout-spacer"></div>
                     <hr>
                     <a class="mdl-navigation__link" href="https://github.com/CreativeIT/getmdl-dashboard">
