@@ -45,12 +45,12 @@
             <div class="mdl-card__supporting-text color--dark-gray">
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
-                        <span class="mdl-card__title-text text-color--smooth-gray">DARKBOARD</span>
+                        <span class="mdl-card__title-text text-color--smooth-gray">Admin Panel</span>
                     </div>
                     <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
                         <span class="login-name text-color--white">Sign in</span>
-                        <span class="login-secondary-text text-color--smoke">Enter fields to sign in to DARKBOARD</span>
                     </div>
+                    <div style="color: red">@include('home.message')</div>
                     <form action="{{ route('admin_logincheck') }}" method="post">
                         @csrf
                     <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">

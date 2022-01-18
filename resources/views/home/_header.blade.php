@@ -47,7 +47,14 @@
                             <li class="has-sub">
                             <a href="javascript:void(0)">{{Auth::user()->name}}</a>
                             <ul class="sub-menu">
+                                @php
+                                    $userRoles = Auth::user()->roles->pluck('name');
+                                @endphp
+                                @if ($userRoles->contains('admin'))
+                                <li><a href="{{route('admin_home')}}" target="_blank">Admin Panel</a></li>
+                                @endif
                                 <li><a href="{{ route('myprofile') }}">My Account</a></li>
+                                <li><a href="{{ route('user_orders') }}">My Subscriptions</a></li>
                                 <li><a href="{{ route('myreviews') }}">My Reviews</a></li>
                                 <li><a href="{{ route('admin_logout') }}">Logout</a></li>
                             </ul>

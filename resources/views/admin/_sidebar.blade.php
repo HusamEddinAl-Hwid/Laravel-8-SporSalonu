@@ -51,6 +51,37 @@
                             <i class="material-icons"></i>
                         </a>
                     </div>
+                    <div class="sub-navigation">
+                        <a class="mdl-navigation__link">
+                            <i class="material-icons">view_comfy</i>
+                            Orders
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link" href="{{ route('admin_orders') }}">
+                                All Orders
+                            </a>
+                            <a class="mdl-navigation__link" href="{{ route('admin_order_list',['status'=>'New']) }}">
+                                New Orders
+                            </a>
+                            <a class="mdl-navigation__link" href="{{ route('admin_order_list',['status'=>'Accepted']) }}">
+                                Accepted Orders
+                            </a>
+                            <a class="mdl-navigation__link" href="{{ route('admin_order_list',['status'=>'Completed']) }}">
+                                Completed Orders
+                            </a>
+                            <a class="mdl-navigation__link" href="{{ route('admin_order_list',['status'=>'Cancelled']) }}">
+                                Cancelled Orders
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-navigation">
+                        <a class="mdl-navigation__link" href="{{ route('admin_users') }}">
+                            <i class="material-icons">verified_user</i>
+                            Users
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
                     <div class="mdl-layout-spacer"></div>
                     <hr>
                     <a class="mdl-navigation__link" href="https://github.com/CreativeIT/getmdl-dashboard">

@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +42,10 @@ Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('i
 
 //Admin
 Route::middleware('auth')->prefix('admin')->group(function (){
+
+    #Admin role
+    Route::middleware('admin')->group(function(){
+
     Route::get('/', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
     # Category
     Route::get('category', [\App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('admin_category');
@@ -100,6 +106,34 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('delete/{id}', [FaqController::class, 'destroy'])->name('admin_faq_delete');
         Route::get('show', [FaqController::class, 'show'])->name('admin_faq_show');
     });
+
+    #Order
+    Route::prefix('order')->group(function (){
+        Route::get('/', [AdminOrderController::class, 'index'])->name('admin_orders');
+        Route::get('list/{status}', [AdminOrderController::class, 'list'])->name('admin_order_list');
+        Route::get('create/{id}', [AdminOrderController::class, 'create'])->name('admin_order_add');
+        Route::post('store', [AdminOrderController::class, 'store'])->name('admin_order_store');
+        Route::get('edit/{id}', [AdminOrderController::class, 'edit'])->name('admin_order_edit');
+        Route::post('update/{id}', [AdminOrderController::class, 'update'])->name('admin_order_update');
+        Route::get('delete/{id}', [AdminOrderController::class, 'destroy'])->name('admin_order_delete');
+        Route::get('show/{id}', [AdminOrderController::class, 'show'])->name('admin_order_show');
+    });
+
+        #User
+        Route::prefix('user')->group(function (){
+            Route::get('/', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin_users');
+            Route::post('create', [\App\Http\Controllers\Admin\UserController::class, 'create'])->name('admin_user_add');
+            Route::post('store', [\App\Http\Controllers\Admin\UserController::class, 'store'])->name('admin_user_store');
+            Route::get('edit/{id}', [\App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin_user_edit');
+            Route::post('update/{id}', [\App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin_user_update');
+            Route::get('delete/{id}', [\App\Http\Controllers\Admin\UserController::class, 'destroy'])->name('admin_user_delete');
+            Route::get('show/{id}', [\App\Http\Controllers\Admin\UserController::class, 'show'])->name('admin_user_show');
+            Route::get('userrole/{id}', [\App\Http\Controllers\Admin\UserController::class, 'user_roles'])->name('admin_user_roles');
+            Route::post('userrolestore/{id}', [\App\Http\Controllers\Admin\UserController::class, 'user_role_store'])->name('admin_user_role_add');
+            Route::get('userroledelete/{userid}/{roleid}', [\App\Http\Controllers\Admin\UserController::class, 'user_role_delete'])->name('admin_user_role_delete');
+        });
+
+    });
 });
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
@@ -114,6 +148,15 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
 
     Route::get('/profile', [UserController::class, 'index'])->name('userprofile');
 
+    #Order
+    Route::prefix('order')->group(function (){
+        Route::get('/', [OrderController::class, 'index'])->name('user_orders');
+        Route::get('create/{id}', [OrderController::class, 'create'])->name('user_order_add');
+        Route::post('store', [OrderController::class, 'store'])->name('user_order_store');
+        Route::get('edit/{id}', [OrderController::class, 'edit'])->name('user_order_edit');
+        Route::post('update/{id}', [OrderController::class, 'update'])->name('user_order_update');
+        Route::get('delete/{id}', [OrderController::class, 'destroy'])->name('user_order_delete');
+    });
 });
 
 

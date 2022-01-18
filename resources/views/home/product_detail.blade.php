@@ -27,13 +27,13 @@
                             <div class="meeting-single-item">
                                 <div class="thumb">
                                     <div class="price">
-                                        <span>{{$data->price}}₺</span>
+                                        <span>{{$data->price}}₺ (Per Month)</span>
                                     </div>
                                     <img src="{{Storage::url($data->image)}}" alt="" style="max-height: 500px; object-fit: cover;">
                                 </div>
                                 <div class="down-content">
-                                    <h4>{{$data->title}}</h4>
-                                    <p>Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-008, Brazil</p>
+                                    <h4>{{$data->title}} ({{$data->months}} Months duration)</h4>
+                                    <p>{{$data->price}}₺ (Per Month)</p>
                                     <div class="info">
                                         @php
                                             $avgrev = \App\Http\Controllers\HomeController::avgrev($data->id);
@@ -74,15 +74,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-button-red">
-                                    <div><a href="{{route('payment',['id'=>$data->id])}}">Subscribe</a></div>
+                                        <div class="main-button-red">
+                                            <div><a href="{{route('user_order_add',['id'=>$data->id])}}">Subscribe</a></div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <section class="meetings-page" id="meetings">
@@ -160,24 +160,24 @@
                                         <h2>Reviews:</h2>
                                     </div>
                                     @foreach($reviews as $rs)
-                                    <div class="col-lg-4">
-                                        <p><i class="fa fa-user"></i> {{$rs->user->name}}</p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <p><i class="fa fa-clock-o"></i> {{$rs->created_at}}</p>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <i class="fa fa-star" @if($rs->rate>=1) style="color: orange" @endif></i>
-                                        <i class="fa fa-star" @if($rs->rate>=2) style="color: orange" @endif></i>
-                                        <i class="fa fa-star" @if($rs->rate>=3) style="color: orange" @endif></i>
-                                        <i class="fa fa-star" @if($rs->rate>=4) style="color: orange" @endif></i>
-                                        <i class="fa fa-star" @if($rs->rate>=5) style="color: orange" @endif></i>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <p><strong>{{$rs->subject}}</strong></p>
-                                        <p>{{$rs->review}}</p>
-                                        <h2></h2>
-                                    </div>
+                                        <div class="col-lg-4">
+                                            <p><i class="fa fa-user"></i> {{$rs->user->name}}</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p><i class="fa fa-clock-o"></i> {{$rs->created_at}}</p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <i class="fa fa-star" @if($rs->rate>=1) style="color: orange" @endif></i>
+                                            <i class="fa fa-star" @if($rs->rate>=2) style="color: orange" @endif></i>
+                                            <i class="fa fa-star" @if($rs->rate>=3) style="color: orange" @endif></i>
+                                            <i class="fa fa-star" @if($rs->rate>=4) style="color: orange" @endif></i>
+                                            <i class="fa fa-star" @if($rs->rate>=5) style="color: orange" @endif></i>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p><strong>{{$rs->subject}}</strong></p>
+                                            <p>{{$rs->review}}</p>
+                                            <h2></h2>
+                                        </div>
                                     @endforeach
                                 </div>
                             </form>
