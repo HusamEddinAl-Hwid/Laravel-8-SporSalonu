@@ -80,7 +80,7 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        $id=$request->input('id');
+        $id = $request->input('id');
 
         $data = Setting::find($id);
         $data->title = $request->input('title');

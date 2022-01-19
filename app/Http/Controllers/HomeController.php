@@ -42,7 +42,8 @@ class HomeController extends Controller
         $setting = Setting::first();
         $slider = Product::select('id','title','image','price','slug','description')->limit(6)->get();
         $daily = Product::select('id','title','image','price','slug','description')->limit(6)->inRandomOrder()->get();
-        $popular = Product::select('id','title','image','price','slug')->limit(6)->orderByDesc('id')->get();
+        $popular = Product::select('id','title','image','price','slug')->limit(6)->inRandomOrder()->get();
+        #$popular = Product::select('id','title','image','price','slug')->limit(6)->orderByDesc('id')->get();
         return view('home.index',compact('setting','includeWhenYes', 'slider','daily','popular'));
     }
 

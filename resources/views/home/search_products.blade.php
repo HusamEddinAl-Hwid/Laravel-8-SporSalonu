@@ -29,13 +29,13 @@
                                                 <div class="price">
                                                     <span>{{$rs->price}}₺</span>
                                                 </div>
-                                                <a href="{{route('payment',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
+                                                <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><img src="{{Storage::url($rs->image)}}" alt=""></a>
                                             </div>
                                             <div class="down-content">
                                                 <div class="date">
                                                     <h6>New </h6>
                                                 </div>
-                                                <a href="{{route('payment',['id'=>$rs->id])}}"><h4>{{$rs->title}}</h4></a>
+                                                <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><h4>{{$rs->title}}</h4></a>
                                                 <p>{{$rs->description}}</p>
                                             </div>
                                         </div>

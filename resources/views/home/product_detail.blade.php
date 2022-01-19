@@ -106,7 +106,7 @@
                                     <div class="col-lg-4 templatemo-item-col all img">
                                         <div class="meeting-item">
                                             <div class="thumb">
-                                                <img src="{{Storage::url($rs->image)}}" alt="">
+                                                <img src="{{Storage::url($rs->image)}}" alt="" style="border-radius: 20px">
                                             </div>
                                         </div>
                                     </div>

@@ -7,7 +7,7 @@
         @php
             $userRoles = Auth::user()->roles->pluck('name');
         @endphp
-        @if ($userRoles->contains('admin')){
+        @if ($userRoles->contains('admin'))
         <li>
             <h6><a href="{{route('admin_home')}}" target="_blank">Admin Panel</a></h6>
         </li>
